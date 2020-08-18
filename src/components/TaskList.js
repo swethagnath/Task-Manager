@@ -7,13 +7,13 @@ const TaskList = () => {
 	const { tasks } = useContext(TaskListsContext)
 	return(
 		<div>
-			{(tasks.length) ? (<ul>
+			{(tasks.length) ? (<ul className="list">
 				{
 					tasks.map(task => {
 						return <Task task={ task } />
 					})
 				}
-			</ul>): (<div>no tasks</div>)}
+			</ul>): (<div className="no-tasks">no tasks</div>)}
 
 		</div>
 	)

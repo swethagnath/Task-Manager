@@ -29,10 +29,13 @@ const TaskForm = () => {
   }, [editItem])
 
   return(
-    <form onSubmit={ handleSubmit }>
-      <input value={ title } onChange={ e => setTitle(e.target.value) }/>
-      <button type="submit">{ editItem ? 'Edit Task' :'Add Task'}</button>
-      <button onClick ={ () =>  clearTask() }>clear</button>
+    <form onSubmit={ handleSubmit } className="form">
+      <input value={ title } onChange={ e => setTitle(e.target.value) } className="task-input" />
+
+      <div className="buttons">
+        <button type="submit" className="btn add-task-btn">{ editItem ? 'Edit Task' :'Add Task'}</button>
+        <button className="btn clear-btn" onClick ={ () =>  clearTask() }>clear</button>
+      </div>
     </form>
   )
 

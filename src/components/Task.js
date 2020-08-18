@@ -12,10 +12,10 @@ const Task = ({ task }) =>  {
 				{ task.title }
 			</span>
 			<div>
-				<button onClick={ () => removeTask(task.id) } className="btn-delete task-btn">
+				<button className="btn-delete task-btn" onClick={ () => removeTask(task.id) } className="btn-delete task-btn">
 					<i className="fa fa-trash"></i>
 				</button>
-				<button onClick={ () => findItem(task.id) } className="btn-edit task-btn">
+				<button className="btn-edit task-btn" onClick={ () => findItem(task.id) } className="btn-edit task-btn">
 					<i className="fa fa-pen"></i>
 				</button>
 			</div>
